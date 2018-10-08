@@ -8,5 +8,5 @@ bot.on('ready', function(){
 
 })
 
-bot.login('process.env.TOKEN');
+bot.login(process.env.TOKEN);
 
