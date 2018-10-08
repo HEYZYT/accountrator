@@ -8,8 +8,5 @@ bot.on('ready', function(){
 
 })
 
-bot.on('message'){
-    if(message.content === ''
-
 bot.login(process.env.TOKEN);
 
