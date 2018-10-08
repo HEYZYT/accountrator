@@ -8,5 +8,5 @@ bot.on('ready', function(){
 
 })
 
-bot.login('NDk4NTY0MjY3NzU1MTc1OTY2.DpvkGg.g2MsLWDHBxN96n7zwROH0-4McMw');
+bot.login('process.env.TOKEN');
 
