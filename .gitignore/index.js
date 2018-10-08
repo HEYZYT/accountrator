@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const bot = new DynamicsCompressorNode.Client();
+const bot = new Discord.Client();
 
 var prefix = ('*')
 
