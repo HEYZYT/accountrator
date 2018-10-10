@@ -8,18 +8,6 @@ bot.on('ready', function(){
 
 })
 
-bot.on("guildMemberRemove", member => {
-    member.guild.fetchAuditLogs().then(function(logs) {
-        let log = logs.entries.first();
-        if (log.action === "MEMBER_BAN_ADD") {
-            member.guild.channels.find("name", "aéroport").send(`Ça ne doit pas être une grosse perte, ${member} viens de se faire bannir du serveur de la **${member.guild.name}** ; il n'avais surrement pas lu le <#431231993267879946>`);
-        } else {
-            member.guild.channels.find("name", "aéroport").send(`Quel dommage, ${member} viens de quitter le serveur de la **${member.guild.name}** !`);
-        }
-    }).catch(console.log);
-})
-
-
 bot.on("message", message => {
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
