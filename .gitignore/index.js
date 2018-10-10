@@ -46,20 +46,44 @@ bot.on("message", message => {
             .setFooter("Ce sont des formulaires à remplir obligatoirement si vous voulez intégrer la Nelyx - Team")
         message.channel.sendEmbed(embed);
     }
+});
 
-    if (message.content === prefix + "infos") {
+bot.on('message', message => {
+    if(message.content === prefix + 'infos') {
+        let sicon = message.guild.iconURL;
         var embed = new Discord.RichEmbed()
-            .setDescription("Informations sur le Discord :")
-            .addField("Nom du Discord", message.guild.name)
-            .addField("Crée le", "Mercredi 04 Avril 2018 à 13h06 (Heure de Paris)")
-            .addField("Tu as rejoint le", message.member.joinedAt)
-            .addField("Nombres de membres sur le Discord", message.guild.memberCount)
-            .setThumbnail("https://pbs.twimg.com/media/DibwUXIXcAUli_m.jpg:large")
-            .setColor("0x0404B4")
-        message.channel.sendEmbed(embed)
+        .setThumbnail(sicon)
+        .setDescription('Infomation du Discord')
+        .addField("Nom du Discord", message.guild.name)
+        .addField("Crée le", message.guild.createdAt)
+        .addField("Tu as rejoins le", message.member.joinedAt)
+        .addField("Utilisateurs sur le Discord", message.guild.memberCount)
+ 
+    message.channel.sendEmbed(embed)    
     }
 
-});
+    if (message.content.startsWith("*sondage")) {
+        if(message.author.id == "175656408459640832", "273848826270580737", "356185137379016706", "176740082340986880", "335150423776165908", "291332583067877378"){
+            let args = message.content.split(" ").slice(1);
+            let thingToEcho = args.join(" ")
+            var embed = new Discord.RichEmbed()
+                .setDescription("Sondage")
+                .addField(thingToEcho, "✅ Pour Oui | ❌ Pour Non")
+                .setColor("#FF00FF")
+                .setFooter(`Sondage crée par ${message.author.username}`)
+            message.guild.channels.find("name", "👌sondage👌").sendEmbed(embed)
+            .then(function (message) {
+                message.react("✅")
+                message.react("❌")
+                message.channel.send("@everyone")
+                console.log(`${message.author.username} viens de faire un sondage !`);
+            })   .catch(function() {
+            })
+            }else{
+                return message.reply("Tu n'as pas la permission!")
+        }
+    }
+})
 
 bot.login(process.env.TOKEN);
 
