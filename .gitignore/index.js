@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ('*')
 
 bot.on('ready', function(){
-    bot.user.setGame('*help');
+    bot.user.setGame(prefix + 'help');
 
 })
 
@@ -24,14 +24,12 @@ bot.on("message", message => {
 
     if (message.content === prefix + "candidature") {
         var embed = new Discord.RichEmbed()
-            .setTitle("Candidature Nelyx - Team :")
-            .setDescription("Si vous souhaitez faire une candidature pour la Nelyx - Team c'est ici que sa ce passe")
-            .addField("Candidature Fortnite", "[Nelyx - Fortnite](https://goo.gl/forms/HbvdUGsl9XWVN4Pf2)")
-            .addField("Candidature Overwatch", "[Nelyx - Overwatch](https://goo.gl/forms/194lyH5jU0lsXTBH2)")
-            .addField("Candidature Paladins", "[Nelyx - Paladins](https://goo.gl/forms/Jf9l4haLC6VvNmkU2)")
-            .setThumbnail("https://pbs.twimg.com/media/DibwUXIXcAUli_m.jpg:large")
-            .setColor("0x0489B1")
-            .setFooter("Ce sont des formulaires à remplir obligatoirement si vous voulez intégrer la Nelyx - Team")
+            .setTitle("Candidature Recrutements - STAFF :")
+            .setDescription("Si vous souhaitez faire une candidature pour le STAFF de AccountRator c'est par ici!")
+            .addField("Candidature Assistant", "[Nelyx - Fortnite](https://goo.gl/forms/HbvdUGsl9XWVN4Pf2)")
+            .addField("Candidature Modérateur", "[Nelyx - Fortnite](https://goo.gl/forms/HbvdUGsl9XWVN4Pf2)")
+            .setThumbnail("https://images-ext-1.discordapp.net/external/v6JHUmPI3owFTdb0Wa9_OYzlftwa5VGF70WvyWZ3Ssc/https/images-ext-1.discordapp.net/external/_veBMBMuqvtyKyNoVQJJj7Rb_hUI2N8P2kl-ncixLGM/https/valentinbraem.s-ul.eu/uEG28JXB:large")
+            .setFooter("Ce sont des formulaires à remplir obligatoirement si vous voulez intégrer la STAFF")
         message.channel.sendEmbed(embed);
     }
 });
@@ -41,7 +39,7 @@ bot.on('message', message => {
         let sicon = message.guild.iconURL;
         var embed = new Discord.RichEmbed()
         .setThumbnail(sicon)
-        .setDescription('Infomation du Discord')
+        .setDescription('Infomations du Discord')
         .addField("Nom du Discord", message.guild.name)
         .addField("Crée le", message.guild.createdAt)
         .addField("Tu as rejoins le", message.member.joinedAt)
@@ -51,7 +49,7 @@ bot.on('message', message => {
     }
 
     if (message.content.startsWith("*sondage")) {
-        if(message.author.id == "175656408459640832", "273848826270580737", "356185137379016706", "176740082340986880", "335150423776165908", "291332583067877378"){
+        if(message.author.id == "356185137379016706", "385851599693676544"){
             let args = message.content.split(" ").slice(1);
             let thingToEcho = args.join(" ")
             var embed = new Discord.RichEmbed()
@@ -64,7 +62,7 @@ bot.on('message', message => {
                 message.react("✅")
                 message.react("❌")
                 message.channel.send("@everyone")
-                console.log(`${message.author.username} viens de faire un sondage !`);
+                console.log(`Sondage!`);
             })   .catch(function() {
             })
             }else{
