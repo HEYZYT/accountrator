@@ -19,10 +19,6 @@ bot.on("message", message => {
             .setFooter("En espérant que vous passerez du bon temps sur le Discord de la Nelyx - Team")
         message.channel.sendEmbed(embed);
     }
-
-    if(message.content === "bite"{
-       message.channel.send("".................▄▄▄▄▄\n..............▄▌░░░░▐▄\n............▐░░░░░░░▌\n....... ▄█▓░░░░░░▓█▄\n....▄▀░░▐░░░░░░▌░▒\n)
-}
         
     if (message.content === prefix + "candidature") {
         var embed = new Discord.RichEmbed()
