@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = ('^^')
+var prefix = ('*')
 
 bot.on('ready', function(){
     bot.user.setGame(prefix + 'help');
@@ -13,7 +13,7 @@ bot.on("message", message => {
         var embed = new Discord.RichEmbed()
             .setTitle("Commandes :")
             .setDescription("Commandes Disponible avec <@498564267755175966>")
-            .addField("*help", "Affiche cette page")
+            .addField(prefix + "help", "Affiche cette page")
             .addField(prefix + "candidature", "Affiche les Google Form disponible pour les candidature du STAFF")
             .addField(prefix + "infos", "Affiche les infos du Discord ; ex : Nom du serveur, Date de création, etc...")
             .setFooter("En espérant que vous passerez du bon temps sur le Discord de la Nelyx - Team")
