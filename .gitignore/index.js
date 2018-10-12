@@ -22,7 +22,8 @@ bot.on("message", message => {
 
     if(message.content === "bite"{
        message.channel.send("".................▄▄▄▄▄\n..............▄▌░░░░▐▄\n............▐░░░░░░░▌\n....... ▄█▓░░░░░░▓█▄\n....▄▀░░▐░░░░░░▌░▒\n)
-
+}
+        
     if (message.content === prefix + "candidature") {
         var embed = new Discord.RichEmbed()
             .setTitle("Candidature Recrutements - STAFF :")
