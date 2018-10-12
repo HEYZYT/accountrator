@@ -14,8 +14,8 @@ bot.on("message", message => {
             .setTitle("Commandes :")
             .setDescription("Commandes Disponible avec <@498564267755175966>")
             .addField("*help", "Affiche cette page")
-            .addField("*candidature", "Affiche les Google Form disponible pour les candidature de la Nelyx - Team")
-            .addField("*infos", "Affiche les infos du Discord ; ex : Nom du serveur, Date de création, etc...")
+            .addField(prefix + "candidature", "Affiche les Google Form disponible pour les candidature du STAFF")
+            .addField(prefix + "infos", "Affiche les infos du Discord ; ex : Nom du serveur, Date de création, etc...")
             .setFooter("En espérant que vous passerez du bon temps sur le Discord de la Nelyx - Team")
         message.channel.sendEmbed(embed);
     }
