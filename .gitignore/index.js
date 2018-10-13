@@ -71,10 +71,8 @@ bot.on('message', message => {
 
 bot.on('message', message => {
     if(message.content === prefix + 'setprefix'){
-        let sicon = message.guild.iconURL;
         var embed = new Discord.RichEmbed()
-        .setThumbnail(sicon)
-        .addField("Essaye plutôt sa:", prefix + "setprefix `<Prefix>`")             
+        .addField("Usage:", prefix + "setprefix `<Prefix>`")             
     }
 })
 
