@@ -8,6 +8,10 @@ bot.on('ready', function(){
 
 })
 
+        
+
+})
+
 bot.on("message", message => {
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
