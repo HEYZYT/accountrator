@@ -21,7 +21,35 @@ bot.on("message", message => {
         message.channel.sendEmbed(embed);
     }
 
-    
+        if(message.content === "dc"){
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        message.delete()
+        channel.send("**Pour générer un code** fait la commande suivante : __**dc/generate**__ @everyone");
+    }
 
     if(message.content === "!u3jYKh46") {
         var embed = new Discord.RichEmbed()
