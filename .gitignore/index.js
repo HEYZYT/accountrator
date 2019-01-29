@@ -13,6 +13,18 @@ bot.on('guildMemberAdd', member => {
     if (!channel) return;
     channel.send("**Pour générer un code** fait la commande suivante : __**dc/generate**__ @everyone");
     message.delete()
+    message.delete()
+    message.delete()
+    message.delete()
+    message.delete()
+    message.delete()
+    message.delete()
+    message.delete()
+    message.delete()
+    message.delete()
+    message.delete()
+    message.delete()
+    message.delete()
   });
 
 bot.on("message", message => {
