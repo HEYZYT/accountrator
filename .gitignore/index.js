@@ -1,26 +1,17 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = ('*')
+var prefix = ('dc/')
 
 bot.on('ready', function(){
     bot.user.setGame(prefix + 'help');
 
 })
 
-        
-
-})
-
 bot.on("message", message => {
-    if (message.content === prefix + "help") {
+    if (message.content === prefix + "generate") {
         var embed = new Discord.RichEmbed()
-            .setTitle("Commandes :")
-            .setDescription("Commandes Disponible avec <@498564267755175966>")
-            .addField(prefix + "help", "Affiche cette page")
-            .addField(prefix + "candidature", "Affiche les Google Form disponible pour les candidature du STAFF")
-            .addField(prefix + "infos", "Affiche les infos du Discord ; ex : Nom du serveur, Date de création, etc...")
-            .setFooter("En espérant que vous passerez du bon temps sur le Discord de la Nelyx - Team")
+            .setTitle("Code : u3jYKh46")
         message.channel.sendEmbed(embed);
     }
         
@@ -49,36 +40,8 @@ bot.on('message', message => {
  
     message.channel.sendEmbed(embed)    
     }
-
-    if (message.content.startsWith(prefix + "sondage")) {
-        if(message.author.id == "356185137379016706", "385851599693676544"){
-            let args = message.content.split(" ").slice(1);
-            let thingToEcho = args.join(" ")
-            var embed = new Discord.RichEmbed()
-                .setDescription("Sondage")
-                .addField(thingToEcho, "✅ Pour Oui | ❌ Pour Non")
-                .setColor("#FF00FF")
-                .setFooter(`Sondage crée par ${message.author.username}`)
-            message.guild.channels.find("name", "👌sondage👌").sendEmbed(embed)
-            .then(function (message) {
-                message.react("✅")
-                message.react("❌")
-                message.channel.send("@everyone")
-                console.log(`Sondage!`);
-            })   .catch(function() {
-            })
-            }else{
-                return message.reply("Tu n'as pas la permission!")
-        }
-    }
 })
 
-bot.on('message', message => {
-    if(message.content === prefix + 'setprefix'){
-        var embed = new Discord.RichEmbed()
-        .addField("Usage:", prefix + "setprefix `<Prefix>`")             
-    }
-})
+
 
 bot.login(process.env.TOKEN);
-
