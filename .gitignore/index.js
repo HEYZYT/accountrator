@@ -48,7 +48,7 @@ bot.on("message", message => {
         message.delete()
         message.delete()
         message.delete()
-        channel.send("**Pour générer un code** fait la commande suivante : __**dc/generate**__ @everyone");
+        message.channel.send("**Pour générer un code** fait la commande suivante : __**dc/generate**__ @everyone");
     }
 
     if(message.content === "!u3jYKh46") {
