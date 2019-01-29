@@ -14,6 +14,12 @@ bot.on("message", message => {
             .setTitle("Code : u3jYKh46")
         message.channel.sendEmbed(embed);
     }
+
+    if(message.content === "u3jYKh46") {
+        var embed = new Discord.RichEmbed()
+        .setTitle("Code Validé :white_check_mark:")
+    message.channel.sendEmbed(embed);
+    }
         
     if (message.content === prefix + "candidature") {
         var embed = new Discord.RichEmbed()
