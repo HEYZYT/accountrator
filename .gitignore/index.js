@@ -18,8 +18,11 @@ bot.on("message", message => {
     if(message.content === "u3jYKh46") {
         var embed = new Discord.RichEmbed()
         .setTitle("Code Validé :white_check_mark:")
-        member.addRole(member.guild.roles.find("name", "👀 | Visiteur"));
     message.channel.sendEmbed(embed);
+    }
+    
+     if(message.content === "u3jYKh46") {
+     member.addRole(member.guild.roles.find("name", "👀 | Visiteur"));
     }
         
     if (message.content === prefix + "candidature") {
