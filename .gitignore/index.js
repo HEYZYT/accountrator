@@ -20,10 +20,6 @@ bot.on("message", message => {
         .setTitle("Code Validé :white_check_mark:")
     message.channel.sendEmbed(embed);
     }
-    
-     if(message.content === "u3jYKh46") {
-     member.addRole(member.guild.roles.find("name", "👀 | Visiteur"));
-    }
         
     if (message.content === prefix + "candidature") {
         var embed = new Discord.RichEmbed()
