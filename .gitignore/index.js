@@ -11,11 +11,11 @@ bot.on('ready', function(){
 bot.on("message", message => {
     if (message.content === prefix + "generate") {
         var embed = new Discord.RichEmbed()
-            .setTitle("Code : u3jYKh46")
+            .setTitle("Code : !u3jYKh46")
         message.channel.sendEmbed(embed);
     }
 
-    if(message.content === "u3jYKh46") {
+    if(message.content === "!u3jYKh46") {
         var embed = new Discord.RichEmbed()
         .setTitle("Code Validé :white_check_mark:")
     message.channel.sendEmbed(embed);
