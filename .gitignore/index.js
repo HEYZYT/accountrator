@@ -12,7 +12,7 @@ bot.on('guildMemberAdd', member => {
     const channel = member.guild.channels.find('name', 'validation');
     if (!channel) return;
     channel.delete()
-    message.guild.createChannel('validation', 'Salons Textuels');
+    message.guild.createChannel('validation', 'arrivants');
     channel.send("**Pour générer un code** fait la commande suivante : __**dc/generate**__ @everyone");
 
   });
